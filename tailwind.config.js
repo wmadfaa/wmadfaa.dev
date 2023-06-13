@@ -34,7 +34,7 @@ module.exports = {
       },
       boxShadowColor: {
         onLight: "#000000",
-        onDark: "rgba(255, 255, 255, 0.25)",
+        onDark: "rgba(255, 255, 255, 0.35)",
       },
       borderRadius: { xs: "0.0625rem" },
       maxWidth: {

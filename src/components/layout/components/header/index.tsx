@@ -16,6 +16,7 @@ function Header() {
       <nav className="flex flex-row items-center gap-4">
         {sections.map(({ label, url }) => (
           <Link
+            key={url}
             to={url}
             className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
           >
