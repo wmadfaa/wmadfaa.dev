@@ -32,6 +32,14 @@ const config: GatsbyConfig = {
         releaseID: process.env.PRISMIC_RELEASE_ID,
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/, // See below to configure properly
+        },
+      },
+    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
     {
