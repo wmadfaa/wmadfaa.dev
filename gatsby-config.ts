@@ -17,6 +17,28 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-gatsby-cloud",
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `de`],
+        defaultLanguage: `en`,
+        siteUrl: `https://wmadfaa.dev`,
+        i18nextOptions: {
+          defaultNS: "common",
+          interpolation: { escapeValue: false },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-prismic-previews",
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,

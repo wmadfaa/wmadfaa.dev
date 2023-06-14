@@ -1,9 +1,13 @@
+// i18next-extract-mark-ns-start about
+import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import { Button, Container } from "../../base";
 import Header from "../../layout/components/header";
 
 function About() {
+  const { t } = useTranslation();
+
   return (
     <Container elementType="section" className="w-full h-screen flex flex-col">
       <Header.Placeholder />
@@ -16,7 +20,7 @@ function About() {
               high-quality results, specializing in React and following a TDD approach.
             </p>
           </div>
-          <Button label="Contact Me" />
+          <Button elementType={Link} to="/contact" label={t("contact me")} />
         </div>
       </div>
     </Container>

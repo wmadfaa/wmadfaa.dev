@@ -1,4 +1,5 @@
-import { Link } from "gatsby";
+// i18next-extract-mark-ns-start common
+import { Link, Trans } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import { Container } from "../../../base";
@@ -14,15 +15,30 @@ function Header() {
     >
       <Logo />
       <nav className="flex flex-row items-center gap-4">
-        {sections.map(({ label, url }) => (
-          <Link
-            key={url}
-            to={url}
-            className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
-          >
-            {label}
-          </Link>
-        ))}
+        <Link
+          to="/about"
+          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
+        >
+          <Trans>about</Trans>
+        </Link>
+        <Link
+          to="/projects"
+          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
+        >
+          <Trans>projects</Trans>
+        </Link>
+        <Link
+          to="/testimonials"
+          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
+        >
+          <Trans>testimonials</Trans>
+        </Link>
+        <Link
+          to="/contact"
+          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
+        >
+          <Trans>contact</Trans>
+        </Link>
       </nav>
       <div className="flex items-center gap-x-4">
         <LangToggle />
@@ -31,13 +47,6 @@ function Header() {
     </Container>
   );
 }
-
-const sections = [
-  { label: "about", url: "#about" },
-  { label: "projects", url: "#projects" },
-  { label: "testimonials", url: "#testimonials" },
-  { label: "contact", url: "#contact" },
-];
 
 Header.Placeholder = () => <div className="block pointer-events-none flex-shrink-0 flex-grow-0 w-full h-24" />;
 
