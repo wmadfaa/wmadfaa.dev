@@ -3,12 +3,17 @@ import { graphql } from "gatsby";
 import * as React from "react";
 
 import Layout from "../components/layout";
-import { About } from "../components/sections/homepage";
+import { About, Projects } from "../components/sections/homepage";
 
-const IndexPage: React.FC<PageProps> = () => {
+interface IPageData {
+  projects: Queries.PrismicProjectConnection;
+}
+
+const IndexPage: React.FC<PageProps<IPageData>> = ({ data }) => {
   return (
     <Layout>
       <About />
+      <Projects projects={data.projects.edges} />
     </Layout>
   );
 };
@@ -31,6 +36,25 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    projects: allPrismicProject(filter: { lang: { eq: $language } }) {
+      edges {
+        node {
+          uid
+          data {
+            name
+            short_description
+            techstack {
+              tech
+            }
+            url {
+              url
+              target
+              type
+            }
+          }
         }
       }
     }

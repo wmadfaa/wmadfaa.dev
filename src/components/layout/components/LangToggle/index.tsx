@@ -20,7 +20,7 @@ function LangToggle() {
             { hidden: lng === language }
           )}
         >
-          {lng}
+          {new Intl.Locale(lng).language}
         </BaseButton>
       ))}
     </>

@@ -1,5 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
+const languages = require("./languages");
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -27,8 +29,8 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`,
-        languages: [`en`, `de`],
-        defaultLanguage: `en`,
+        languages: languages.languages,
+        defaultLanguage: languages.defaultLanguage,
         siteUrl: `https://wmadfaa.dev`,
         i18nextOptions: {
           defaultNS: "common",
