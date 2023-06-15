@@ -1,19 +1,25 @@
 import * as React from "react";
+import { useEffect, useState } from "react";
 
 import dark_mode_icon from "../../../../assets/icons/dark_mode.svg";
 import light_mode_icon from "../../../../assets/icons/light_mode.svg";
 import { THEME_MODE_STORAGE_KEY } from "../../../../helpers/constants";
-import useLocalStorage from "../../../../hooks/useLocalStorage";
 import { IconButton } from "../../../base";
 
 function ThemeToggle() {
-  const [value, setValue] = useLocalStorage(THEME_MODE_STORAGE_KEY);
+  const [value, setValue] = useState("none");
+
+  useEffect(() => {
+    setValue(localStorage.getItem(THEME_MODE_STORAGE_KEY) as string);
+  }, []);
 
   const isDark = value === "dark";
 
   const handleToggleTheme = () => {
     document.documentElement.classList[isDark ? "remove" : "add"]("dark");
-    setValue(isDark ? "light" : "dark");
+    const nextValue = isDark ? "light" : "dark";
+    localStorage.setItem(THEME_MODE_STORAGE_KEY, nextValue);
+    setValue(nextValue);
   };
 
   return <IconButton icon={isDark ? light_mode_icon : dark_mode_icon} onClick={handleToggleTheme} />;
