@@ -3,10 +3,11 @@ import { graphql } from "gatsby";
 import * as React from "react";
 
 import Layout from "../components/layout";
-import { About, Projects } from "../components/sections/homepage";
+import { About, Projects, Testimonials } from "../components/sections/homepage";
 
 interface IPageData {
   projects: Queries.PrismicProjectConnection;
+  testimonials: Queries.PrismicTestimonialConnection;
 }
 
 const IndexPage: React.FC<PageProps<IPageData>> = ({ data }) => {
@@ -14,6 +15,7 @@ const IndexPage: React.FC<PageProps<IPageData>> = ({ data }) => {
     <Layout>
       <About />
       <Projects projects={data.projects.edges} />
+      <Testimonials testimonials={data.testimonials.edges} />
     </Layout>
   );
 };
@@ -51,8 +53,26 @@ export const query = graphql`
             }
             url {
               url
-              target
-              type
+            }
+          }
+        }
+      }
+    }
+    testimonials: allPrismicTestimonial(filter: { lang: { eq: $language } }) {
+      edges {
+        node {
+          uid
+          data {
+            client_job_title
+            client_name
+            company
+            content
+            rate
+            client {
+              url
+            }
+            url {
+              url
             }
           }
         }
