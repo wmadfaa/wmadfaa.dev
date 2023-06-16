@@ -8,7 +8,7 @@ interface IProps {
   testimonial: Queries.PrismicTestimonial;
 }
 
-function ProjectCard({ testimonial }: IProps) {
+function TestimonialCard({ testimonial }: IProps) {
   return (
     <BaseButton
       elementType={Link}
@@ -29,4 +29,4 @@ function ProjectCard({ testimonial }: IProps) {
   );
 }
 
-export default ProjectCard;
+export default TestimonialCard;
