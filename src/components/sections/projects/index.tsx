@@ -1,5 +1,6 @@
 // i18next-extract-mark-ns-start projects
 import { Trans } from "gatsby-plugin-react-i18next";
+import { sortBy } from "lodash";
 import * as React from "react";
 
 import { Container } from "../../base";
@@ -24,8 +25,8 @@ function Projects({ projects }: IProps) {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-flow-col lg:grid-rows-3 lg:grid-cols-none gap-9">
-        {projects.map((project) => (
+      <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-dense gap-9">
+        {sortBy(projects, (d) => d.node.data.short_description?.length).map((project) => (
           <ProjectCard key={project.node.uid} project={project.node} />
         ))}
       </div>

@@ -14,11 +14,11 @@ function ProjectCard({ project }: IProps) {
       elementType={Link}
       to={project.data.url!.url!}
       target="_blank"
-      className="w-full lg:w-auto lg:max-w-screen-sm bg-light dark:bg-dark border border-onLight dark:border-onDark rounded-sm py-4 px-3 flex flex-col justify-between gap-y-9"
+      className="bg-light dark:bg-dark border border-onLight dark:border-onDark rounded-sm py-4 px-3 inline-flex flex-col justify-between gap-y-9"
     >
       <div className="space-y-4 text-onLight dark:text-onDark">
         <h3 className="text-xl font-bold capitalize">{project.data.name}</h3>
-        <p className="text-sm font-normal">{project.data.short_description}</p>
+        <p className="text-sm font-normal max-w-screen-sm">{project.data.short_description}</p>
       </div>
       <div className="flex flex-row flex-wrap gap-1">
         {project.data.techstack?.map((tech, i, techstack) => (

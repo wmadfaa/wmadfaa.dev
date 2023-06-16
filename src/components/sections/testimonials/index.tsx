@@ -1,5 +1,6 @@
 // i18next-extract-mark-ns-start testimonials
 import { Trans } from "gatsby-plugin-react-i18next";
+import { sortBy } from "lodash";
 import * as React from "react";
 
 import { Container } from "../../base";
@@ -21,8 +22,8 @@ function Testimonials({ testimonials }: IProps) {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-flow-col lg:grid-rows-2 lg:grid-cols-none gap-9 items-start">
-        {testimonials.map((testimonial) => (
+      <div className="grid grid-cols-1 lg:grid-cols-2 grid-flow-dense gap-9">
+        {sortBy(testimonials, (d) => d.node.data.content?.length).map((testimonial) => (
           <TestimonialCard key={testimonial.node.uid} testimonial={testimonial.node} />
         ))}
       </div>

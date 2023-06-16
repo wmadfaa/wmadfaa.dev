@@ -14,7 +14,7 @@ function TestimonialCard({ testimonial }: IProps) {
       elementType={Link}
       to={testimonial.data.url!.url!}
       target="_blank"
-      className="w-full lg:w-auto lg:max-w-screen-sm bg-light dark:bg-dark border border-onLight dark:border-onDark rounded-sm py-4 px-3 flex flex-col gap-y-5 text-onLight dark:text-onDark"
+      className="w-full lg:w-auto lg:max-w-screen-sm bg-light dark:bg-dark border border-onLight dark:border-onDark rounded-sm py-4 px-3 inline-flex flex-col gap-y-5 text-onLight dark:text-onDark"
     >
       <div className="space-y-3">
         <h3 className="text-xl font-bold capitalize">{testimonial.data.company}</h3>
