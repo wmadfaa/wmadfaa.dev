@@ -1,9 +1,10 @@
 // i18next-extract-mark-ns-start contact
-import { Link } from "gatsby";
 import { Trans } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
 import { Container } from "../../base";
+import ContactForm from "./ContactForm";
+import ContactsList from "./ContactsList";
 
 interface IProps {
   contactSlicePrimary: Queries.PrismicHomepageDataBodyContactsPrimary;
@@ -27,26 +28,9 @@ function Contact({ contactSlicePrimary, contacts, working_hours }: IProps) {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2">
-        <div></div>
-        <div className="w-full h-full grid place-items-center">
-          <dl className="space-y-5">
-            {contacts.map((contact) => (
-              <div className="space-y-1.5">
-                <dt className="text-base font-bold capitalize">{contact.contact_type}</dt>
-                <dd className="text-sm font-normal hover:underline">
-                  <Link to={contact.contact_url!.url!} target="_blank">
-                    {contact.contact_label}
-                  </Link>
-                </dd>
-              </div>
-            ))}
-            <div className="space-y-1.5">
-              <dt className="text-base font-bold capitalize">working hours</dt>
-              <dd className="text-sm font-normal">{working_hours}</dd>
-            </div>
-          </dl>
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-44">
+        <ContactForm />
+        <ContactsList contacts={contacts} working_hours={working_hours} />
       </div>
     </Container>
   );
