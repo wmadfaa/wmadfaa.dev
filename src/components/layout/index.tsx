@@ -4,15 +4,17 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 
 interface IProps {
+  githubUrl: string;
+  cvUrl: string;
   children: React.ReactNode;
 }
 
-function Layout({ children }: IProps) {
+function Layout({ children, cvUrl, githubUrl }: IProps) {
   return (
     <div className="relative w-full h-full">
       <Header />
       <main className="w-full h-full">{children}</main>
-      <Footer />
+      <Footer cvUrl={cvUrl} githubUrl={githubUrl} />
     </div>
   );
 }

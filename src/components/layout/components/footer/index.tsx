@@ -6,15 +6,20 @@ import LangToggle from "../LangToggle";
 import Logo from "../logo";
 import ThemeToggle from "../themeToggle";
 
-function Footer() {
+interface IProps {
+  githubUrl: string;
+  cvUrl: string;
+}
+
+function Footer({ githubUrl, cvUrl }: IProps) {
   return (
     <div className="absolute bottom-0 inset-x-0 border-t border-onLight dark:border-onDark">
       <Container elementType="footer" className="w-full h-24 flex flex-row items-center justify-between">
         <div className="flex items-center gap-x-4">
-          <Link to="/" className="text-sm font-medium hover:underline align-middle text-onLight dark:text-onDark">
+          <Link to={cvUrl} target="_blank" className="text-sm font-medium hover:underline align-middle">
             Resume / CV
           </Link>
-          <Link to="/" className="text-sm font-medium hover:underline align-middle text-onLight dark:text-onDark">
+          <Link to={githubUrl} target="_blank" className="text-sm font-medium hover:underline align-middle">
             Github
           </Link>
         </div>

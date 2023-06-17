@@ -14,10 +14,10 @@ function Testimonials({ testimonials }: IProps) {
     <Container elementType="section" className="w-full min-h-screen flex flex-col py-44 gap-y-20">
       <div className="max-w-md space-y-9">
         <div className="space-y-5">
-          <h1 className="text-5xl font-bold capitalize text-onLight dark:text-onDark">
+          <h1 className="text-5xl font-bold capitalize">
             <Trans>Testimonials</Trans>
           </h1>
-          <p className="text-sm text-onLight dark:text-onDark text-start">
+          <p className="text-sm text-start">
             <Trans>Inspiring Words from Satisfied Clients That Showcase My Frontend Development Expertise.</Trans>
           </p>
         </div>

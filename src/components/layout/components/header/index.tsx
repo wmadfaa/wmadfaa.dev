@@ -15,28 +15,16 @@ function Header() {
     >
       <Logo />
       <nav className="flex flex-row items-center gap-4">
-        <Link
-          to="/about"
-          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
-        >
+        <Link to="/about" className="text-sm font-medium align-middle capitalize hover:underline">
           <Trans>about</Trans>
         </Link>
-        <Link
-          to="/projects"
-          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
-        >
+        <Link to="/projects" className="text-sm font-medium align-middle capitalize hover:underline">
           <Trans>projects</Trans>
         </Link>
-        <Link
-          to="/testimonials"
-          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
-        >
+        <Link to="/testimonials" className="text-sm font-medium align-middle capitalize hover:underline">
           <Trans>testimonials</Trans>
         </Link>
-        <Link
-          to="/contact"
-          className="text-sm font-medium align-middle text-onLight dark:text-onDark capitalize hover:underline"
-        >
+        <Link to="/contact" className="text-sm font-medium align-middle capitalize hover:underline">
           <Trans>contact</Trans>
         </Link>
       </nav>
