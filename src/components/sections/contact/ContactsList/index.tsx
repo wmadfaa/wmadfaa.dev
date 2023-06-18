@@ -19,7 +19,7 @@ function ContactsList({ contacts, working_hours }: IProps) {
       </h1>
       <dl className="space-y-5">
         {contacts.map((contact) => (
-          <ContactListItem label={contact.contact_type}>
+          <ContactListItem key={contact.contact_type} label={contact.contact_type}>
             <Link to={contact.contact_url!.url!} target="_blank" className="hover:underline">
               {contact.contact_label}
             </Link>

@@ -4,7 +4,7 @@ import * as React from "react";
 import { Input, Textarea } from "../../../base";
 import Select from "../../../base/select";
 
-function ContactForm() {
+function ContactInputs() {
   const { t } = useTranslation();
   return (
     <form className="space-y-8">
@@ -30,4 +30,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default ContactInputs;
