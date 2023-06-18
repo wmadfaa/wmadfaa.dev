@@ -1,6 +1,17 @@
 {
+  "Email": "Email",
+  "I'm looking for a freelancer | contractor": "I'm looking for a freelancer | contractor",
+  "I'm looking for a full-time developer (employee)": "I'm looking for a full-time developer (employee)",
+  "I'm looking for a part-time developer (employee)": "I'm looking for a part-time developer (employee)",
+  "Meeting Topic": "Meeting Topic",
+  "Select your meeting topic": "Select your meeting topic",
+  "Tell me about your project.": "Tell me about your project.",
+  "Your Email Address": "Your Email Address",
+  "Your Full Name": "Your Full Name",
   "about": "about",
   "contact": "contact",
+  "full name": "full name",
+  "message": "message",
   "projects": "projects",
   "testimonials": "testimonials"
 }
