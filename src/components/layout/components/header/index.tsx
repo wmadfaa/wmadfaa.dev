@@ -2,7 +2,8 @@
 import { Link, Trans } from "gatsby-plugin-react-i18next";
 import * as React from "react";
 
-import { Container } from "../../../base";
+import menu_icon from "../../../../assets/icons/menu.svg";
+import { Container, IconButton } from "../../../base";
 import LangToggle from "../LangToggle";
 import Logo from "../logo";
 import ThemeToggle from "../themeToggle";
@@ -13,8 +14,9 @@ function Header() {
       elementType="header"
       className="absolute top-0 inset-x-0 flex flex-row items-center justify-between h-24"
     >
+      <IconButton elementType="button" icon={menu_icon} className="md:hidden" />
       <Logo />
-      <nav className="flex flex-row items-center gap-4">
+      <nav className=" hidden md:flex flex-row items-center gap-4">
         <Link to="/about" className="text-sm font-medium align-middle capitalize hover:underline">
           <Trans>about</Trans>
         </Link>

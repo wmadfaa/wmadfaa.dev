@@ -18,8 +18,8 @@ function About({ fullName, overview }: IProps) {
       <Header.Placeholder />
       <div className="grow flex flex-col justify-center">
         <div className="max-w-screen-md space-y-9 -mt-24">
-          <div className="space-y-5">
-            <h1 className="text-5xl font-bold capitalize">{fullName}</h1>
+          <div className="space-y-4 md:space-y-5">
+            <h1 className="text-2xl md:text-5xl font-bold capitalize">{fullName}</h1>
             <p className="text-sm text-start">{overview}</p>
           </div>
           <Button elementType={Link} to="/contact" label={t("contact me")} />

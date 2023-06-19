@@ -18,10 +18,10 @@ function Contact({ contactSlicePrimary, contacts, working_hours }: IProps) {
   const { t } = useTranslation();
 
   return (
-    <Container elementType="section" className="w-full min-h-screen flex flex-col py-44 gap-y-20">
+    <Container elementType="section" className="w-full min-h-screen flex flex-col py-44 gap-y-12 md:gap-y-20">
       <div className="max-w-md space-y-9">
-        <div className="space-y-5">
-          <h1 className="text-5xl font-bold capitalize">
+        <div className="space-y-4 md:space-y-5">
+          <h1 className="text-2xl md:text-5xl font-bold capitalize">
             <Trans>Contact</Trans>
           </h1>
           <p className="text-sm text-start">
@@ -32,18 +32,18 @@ function Contact({ contactSlicePrimary, contacts, working_hours }: IProps) {
           </p>
         </div>
       </div>
-      <form className="space-y-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-44">
+      <form>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-9">
           <ContactInputs />
-          <ContactsList contacts={contacts} working_hours={working_hours} />
-        </div>
-        <div className="space-y-9">
-          <Button label={t("Book a meeting")} disabled />
-          <ContactListItem label={t("or call")}>
-            <Link to={`tel:${contactSlicePrimary.phone_number}`} className="hover:underline">
-              {contactSlicePrimary.phone_number}
-            </Link>
-          </ContactListItem>
+          <ContactsList contacts={contacts} working_hours={working_hours} className="order-last lg:order-none" />
+          <div className="space-y-9 mb-36 lg:mb-0">
+            <Button label={t("Book a meeting")} disabled />
+            <ContactListItem label={t("or call")}>
+              <Link to={`tel:${contactSlicePrimary.phone_number}`} className="hover:underline">
+                {contactSlicePrimary.phone_number}
+              </Link>
+            </ContactListItem>
+          </div>
         </div>
       </form>
     </Container>

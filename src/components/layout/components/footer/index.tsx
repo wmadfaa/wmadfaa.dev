@@ -16,14 +16,16 @@ function Footer({ githubUrl, cvUrl }: IProps) {
     <div className="absolute bottom-0 inset-x-0 border-t border-onLight dark:border-onDark">
       <Container elementType="footer" className="w-full h-24 flex flex-row items-center justify-between">
         <div className="flex items-center gap-x-4">
-          <Link to={cvUrl} target="_blank" className="text-sm font-medium hover:underline align-middle">
+          <Link to={cvUrl} target="_blank" className="text-xs md:text-sm font-medium hover:underline align-middle">
             Resume / CV
           </Link>
-          <Link to={githubUrl} target="_blank" className="text-sm font-medium hover:underline align-middle">
+          <Link to={githubUrl} target="_blank" className="text-xs md:text-sm font-medium hover:underline align-middle">
             Github
           </Link>
         </div>
-        <Logo />
+        <div className="hidden md:block">
+          <Logo />
+        </div>
         <div className="flex items-center gap-x-4">
           <LangToggle />
           <ThemeToggle />

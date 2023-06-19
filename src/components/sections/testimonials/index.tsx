@@ -11,10 +11,10 @@ interface IProps {
 }
 function Testimonials({ testimonials }: IProps) {
   return (
-    <Container elementType="section" className="w-full min-h-screen flex flex-col py-44 gap-y-20">
+    <Container elementType="section" className="w-full min-h-screen flex flex-col py-44 gap-y-12 md:gap-y-20">
       <div className="max-w-md space-y-9">
-        <div className="space-y-5">
-          <h1 className="text-5xl font-bold capitalize">
+        <div className="space-y-4 md:space-y-5">
+          <h1 className="text-2xl md:text-5xl font-bold capitalize">
             <Trans>Testimonials</Trans>
           </h1>
           <p className="text-sm text-start">
