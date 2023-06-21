@@ -31,7 +31,7 @@ function Header() {
         </Link>
       </nav>
       <div className="flex items-center gap-x-4">
-        <LangToggle />
+        {/*<LangToggle />*/}
         <ThemeToggle />
       </div>
     </Container>

@@ -27,7 +27,7 @@ function Footer({ githubUrl, cvUrl }: IProps) {
           <Logo />
         </div>
         <div className="flex items-center gap-x-4">
-          <LangToggle />
+          {/*<LangToggle />*/}
           <ThemeToggle />
         </div>
       </Container>
