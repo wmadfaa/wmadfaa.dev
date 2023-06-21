@@ -52,7 +52,7 @@ function _Select<
           !selectInnerProps.isSelected && !selectInnerProps.isFocused && !selectInnerProps.isDisabled,
         "!bg-dark/10 !text-dark dark:!bg-white/25 dark:!text-white !cursor-pointer":
           selectInnerProps.isFocused && !selectInnerProps.isSelected && !selectInnerProps.isDisabled,
-        "!bg-dark hocus:!bg-dark !text-white hocus:!text-white dark:!bg-dark !cursor-default":
+        "!bg-dark/90 !text-white dark:!bg-white/90 dark:!text-dark !cursor-default":
           selectInnerProps.isSelected && !selectInnerProps.isDisabled,
         "!text-onLight-soft dark:!text-onDark-soft !cursor-not-allowed": selectInnerProps.isDisabled,
         "!bg-primary-light dark:!bg-white/25": selectInnerProps.isDisabled && selectInnerProps.isFocused,
