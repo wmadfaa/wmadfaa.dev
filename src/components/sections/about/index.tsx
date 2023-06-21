@@ -14,7 +14,7 @@ function About({ fullName, overview }: IProps) {
   const { t } = useTranslation();
 
   return (
-    <Container elementType="section" className="w-full h-screen flex flex-col">
+    <Container id="about" elementType="section" className="w-full h-screen flex flex-col">
       <Header.Placeholder />
       <div className="grow flex flex-col justify-center">
         <div className="max-w-screen-md space-y-9 -mt-24">
@@ -22,7 +22,7 @@ function About({ fullName, overview }: IProps) {
             <h1 className="text-2xl md:text-5xl font-bold capitalize">{fullName}</h1>
             <p className="text-sm text-start">{overview}</p>
           </div>
-          <Button elementType={Link} to="/contact" label={t("contact me")} />
+          <Button elementType={Link} to="#contact" label={t("contact me")} />
         </div>
       </div>
     </Container>

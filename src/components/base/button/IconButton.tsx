@@ -33,7 +33,7 @@ function _IconButton<T extends React.ElementType = DEFAULT_ELEMENT_TYPE>(props: 
       className={classNames(
         className,
         classes?.root,
-        "inline-grid grid-flow-col place-items-center place-content-center",
+        "inline-grid place-items-center",
         "bg-light dark:bg-dark text-onLight dark:text-onDark border-onLight dark:border-onDark",
         {
           "p-1.5": size === "base",

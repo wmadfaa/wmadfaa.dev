@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply scroll-smooth box-border transition-all motion-reduce:transition-none;
+    @apply scroll-smooth box-border transition-colors motion-reduce:transition-none;
   }
 
   body {

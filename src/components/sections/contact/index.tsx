@@ -18,7 +18,11 @@ function Contact({ contactSlicePrimary, contacts, working_hours }: IProps) {
   const { t } = useTranslation();
 
   return (
-    <Container elementType="section" className="w-full min-h-screen flex flex-col py-44 gap-y-12 md:gap-y-20">
+    <Container
+      id="contact"
+      elementType="section"
+      className="w-full min-h-screen flex flex-col py-44 gap-y-12 md:gap-y-20"
+    >
       <div className="max-w-md space-y-9">
         <div className="space-y-4 md:space-y-5">
           <h1 className="text-2xl md:text-5xl font-bold capitalize">
@@ -32,12 +36,12 @@ function Contact({ contactSlicePrimary, contacts, working_hours }: IProps) {
           </p>
         </div>
       </div>
-      <form>
+      <form action="https://getform.io/f/3197ba8a-862c-4fde-be4c-9c2c54f1d43e" method="POST">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-9">
           <ContactInputs />
           <ContactsList contacts={contacts} working_hours={working_hours} className="order-last lg:order-none" />
           <div className="space-y-9 mb-36 lg:mb-0">
-            <Button label={t("Book a meeting")} disabled />
+            <Button type="submit" label={t("Book a meeting")} />
             <ContactListItem label={t("or call")}>
               <Link to={`tel:${contactSlicePrimary.phone_number}`} className="hover:underline">
                 {contactSlicePrimary.phone_number}
