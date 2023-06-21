@@ -47,12 +47,12 @@ function _Select<
       ),
     menuList: () => cx("!py-2"),
     option: (selectInnerProps) =>
-      cx("!text-p2-bold !py-2.5 !px-5", {
-        "!bg-transparent !text-dark dark:!text-white":
+      cx("text-xs font-medium lg:!text-sm !py-2.5 !px-3 lg:!px-5", {
+        "!bg-transparent !text-onLight dark:!text-onDark":
           !selectInnerProps.isSelected && !selectInnerProps.isFocused && !selectInnerProps.isDisabled,
-        "!bg-primary-light !text-dark dark:!bg-white/25 dark:!text-white !cursor-pointer":
+        "!bg-dark/10 !text-dark dark:!bg-white/25 dark:!text-white !cursor-pointer":
           selectInnerProps.isFocused && !selectInnerProps.isSelected && !selectInnerProps.isDisabled,
-        "!bg-primary hocus:!bg-primary !text-white hocus:!text-white dark:!bg-dark-solid !cursor-default":
+        "!bg-dark hocus:!bg-dark !text-white hocus:!text-white dark:!bg-dark !cursor-default":
           selectInnerProps.isSelected && !selectInnerProps.isDisabled,
         "!text-onLight-soft dark:!text-onDark-soft !cursor-not-allowed": selectInnerProps.isDisabled,
         "!bg-primary-light dark:!bg-white/25": selectInnerProps.isDisabled && selectInnerProps.isFocused,
