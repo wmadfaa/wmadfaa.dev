@@ -8,8 +8,8 @@ require("dotenv").config({
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `wmadfaa.dev`,
-    siteUrl: `https://www.wmadfaa.dev`,
+    title: `mlengineer.me`,
+    siteUrl: `https://www.mlengineer.me`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
