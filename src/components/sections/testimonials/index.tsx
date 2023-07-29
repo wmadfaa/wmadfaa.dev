@@ -22,7 +22,7 @@ function Testimonials({ testimonials }: IProps) {
             <Trans>Testimonials</Trans>
           </h1>
           <p className="text-sm text-start">
-            <Trans>Inspiring Words from Satisfied Clients That Showcase My Frontend Development Expertise.</Trans>
+            <Trans>Inspiring Words from Satisfied Clients and Employers that Showcase My Machine Learning and Software Development Expertise.</Trans>
           </p>
         </div>
       </div>
