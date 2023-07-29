@@ -54,7 +54,7 @@ export const query = graphql`
         }
       }
     }
-    homepage: prismicHomepage(lang: { eq: $language }) {
+    homepage: prismicHomepage {
       data {
         working_hours
         cv {
@@ -65,7 +65,7 @@ export const query = graphql`
         }
       }
     }
-    about: prismicHomepage(lang: { eq: $language }) {
+    about: prismicHomepage {
       data {
         body {
           ... on PrismicHomepageDataBodyAbout {
@@ -80,7 +80,7 @@ export const query = graphql`
         }
       }
     }
-    contact: prismicHomepage(lang: { eq: $language }) {
+    contact: prismicHomepage {
       data {
         body {
           ... on PrismicHomepageDataBodyContacts {
@@ -100,7 +100,7 @@ export const query = graphql`
         }
       }
     }
-    projects: allPrismicProject(filter: { lang: { eq: $language } }) {
+    projects: allPrismicProject {
       edges {
         node {
           uid
@@ -117,7 +117,7 @@ export const query = graphql`
         }
       }
     }
-    testimonials: allPrismicTestimonial(filter: { lang: { eq: $language } }) {
+    testimonials: allPrismicTestimonial {
       edges {
         node {
           uid

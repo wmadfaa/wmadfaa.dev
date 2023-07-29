@@ -1,11 +1,11 @@
 module.exports = {
   languages: [
-    "en-us",
+    "en-uk",
     // "de-at"
   ],
   formatted_languages: {
-    "en-us": "en",
+    "en-uk": "en",
     // "de-at": "de",
   },
-  defaultLanguage: "en-us",
+  defaultLanguage: "en-uk",
 };

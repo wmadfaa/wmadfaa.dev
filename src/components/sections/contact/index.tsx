@@ -36,7 +36,7 @@ function Contact({ contactSlicePrimary, contacts, working_hours }: IProps) {
           </p>
         </div>
       </div>
-      <form action="https://getform.io/f/3197ba8a-862c-4fde-be4c-9c2c54f1d43e" method="POST">
+      <form action="https://getform.io/f/535f399b-11c6-47cf-b23f-14dcdbfee3a5" method="POST">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-9">
           <ContactInputs />
           <ContactsList contacts={contacts} working_hours={working_hours} className="order-last lg:order-none" />
